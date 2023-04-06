@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
+<meta name="generator" content="Jekyll v4.3.2" />
+<meta property="og:title" content="Your awesome title" />
+<meta property="og:locale" content="en_US" />
+<link rel="canonical" href="/fun-site/" />
+<meta property="og:url" content="/fun-site/" />
+<meta property="og:site_name" content="Your awesome title" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Your awesome title" />
+<link rel="stylesheet" href="/fun-site/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/fun-site/feed.xml" title="Your awesome title" /></head>
+<body><header class="site-header" role="banner">
+
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <h1>Random word combination generator</h1>
+
+<p id="word-generator">
+    
+    
+    
+      
+      рагульний
+    
+      
+      факап
+    
+      
+      Радєйка
+    
+  </p>
+  
+  <button id="generate-btn">Generate new words</button>
+  
+  <script>
+    var wordGenerator = document.getElementById("word-generator");
+    var generateBtn = document.getElementById("generate-btn");
+    var words = ["шавуха","шазамити","Шайба","Шалава","Шалайка","Шалений принтер","Цейво","цейвохати","Целка","Центробанк","Церапнути","церква","фаббінг","Фаблет","файний","Файрвол","факап","рабсіянин","Равбер","равлик","Равлик","рагуль","рагульний","рагулятор","Рагуляція","Радєйка"]; // use JSON encoding to pass data to JavaScript
+    var num_words = 3; // define num_words outside of the click event listener function
+  
+    console.log(words); // output the words to the console for debugging
+  
+    if (wordGenerator && generateBtn && words) {
+      console.log("Button and paragraph found"); // log that the button and paragraph elements were found
+      generateBtn.onclick = function() {
+        wordGenerator.innerHTML = ""; // clear out the existing words
+        num_words = 1 + Math.floor(Math.random() * 3)
+        for (i = 1; i <= num_words; i++) {
+          var word = words[Math.floor(Math.random() * words.length)];
+          wordGenerator.innerHTML += word;
+          if (i < num_words) {
+            wordGenerator.innerHTML += " ";
+          }
+        }
+      }
+    } else {
+      console.log("Button or paragraph not found"); // log that the button or paragraph element was not found
+    }
+  </script>
+  
+      </div>
+</footer>
+</body>
+
+</html>
